@@ -1,0 +1,10 @@
+databaseChangeLog {
+
+// migration scripts - run once
+  include (file: "changelog.json", relativeToChangelogFile: "true")
+
+// database objects - run on change
+  include (file: "changelog-procedures.json", relativeToChangelogFile: "true")
+  include (file: "changelog-views.json", relativeToChangelogFile: "true")
+
+}
