@@ -1,0 +1,13 @@
+databaseChangeLog() {
+
+//  changeSet (author: "jdoe", id: "script.sql") {
+//    sqlFile (path: "2018Q3/script.sql", endDelimiter: "\n/\\s*\n|\n/\\s*\$", stripComments: "true")
+//  }
+//
+//  include file: "another_file.groovy"
+
+  changeSet (author: "pmuller", id: "migration_file.sql") {
+    sqlFile (path: "migration_file.sql")
+  }
+
+}
