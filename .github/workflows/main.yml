@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: liquibase/liquibase-github-action@v2
         with:
-          operation: 'validate'
+          operation: 'status'
           classpath: '/'
           changeLogFile: 'changelog_master.json'
           username: ${{ secrets.USERNAME }}
