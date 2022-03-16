@@ -20,6 +20,9 @@ jobs:
     steps:
       - name: Google Cloud SQL Proxy
         uses: mattes/gce-cloudsql-proxy-action@v1.0.1
+        with:
+          creds: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+          instance: clearchoice-main-nprod:us-west1:datawarehouse
 
       # Checks-out repository under $GITHUB_WORKSPACE, so job can access it
       - uses: actions/checkout@v2
