@@ -18,8 +18,12 @@ jobs:
     runs-on: ubuntu-latest
     name: Test Liquibase Action
     steps:
+      - name: Google Cloud SQL Proxy
+        uses: mattes/gce-cloudsql-proxy-action@v1.0.1
+
       # Checks-out repository under $GITHUB_WORKSPACE, so job can access it
       - uses: actions/checkout@v2
+
       - uses: liquibase/liquibase-github-action@v2
         with:
           operation: 'status'
