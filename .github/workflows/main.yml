@@ -28,8 +28,9 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: debug
-        run: ls -l | 
-             env
+        run: | 
+          ls -l
+          env | sort
 
       - uses: liquibase/liquibase-github-action@v2
         with:
