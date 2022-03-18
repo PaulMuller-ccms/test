@@ -26,14 +26,18 @@ jobs:
 
       # Checks-out repository under $GITHUB_WORKSPACE, so job can access it
       - uses: actions/checkout@v2
+      
+      - name: debug
+        run: ls -l | 
+             env
 
       - uses: liquibase/liquibase-github-action@v2
         with:
           operation: 'status'
           classpath: '/'
           changeLogFile: 'changelog_master.json'
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          url: ${{ secrets.URL }}
+          username: postgres
+          password: P@ssw0rd
+          url: jdbc:postgresql://127.0.0.1:5432/datawarehouse
 
 
