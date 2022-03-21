@@ -39,6 +39,6 @@ jobs:
 #          changeLogFile: 'changelog_master.json'
 #          username: postgres
 #          password: P@ssw0rd
-          url: jdbc:postgresql:postgres
+#          url: jdbc:postgresql:postgres
 
 
