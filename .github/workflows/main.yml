@@ -30,7 +30,7 @@ jobs:
       - name: debug
         run: | 
           ls -l
-          wait-for-it.sh
+
 
 #      - uses: liquibase/liquibase-github-action@v2
 #        with:
