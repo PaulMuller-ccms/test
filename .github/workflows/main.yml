@@ -30,15 +30,15 @@ jobs:
       - name: debug
         run: | 
           ls -l
-          env | sort
+          wait-for-it.sh
 
-      - uses: liquibase/liquibase-github-action@v2
-        with:
-          operation: 'status'
-          classpath: '/'
-          changeLogFile: 'changelog_master.json'
-          username: postgres
-          password: P@ssw0rd
+#      - uses: liquibase/liquibase-github-action@v2
+#        with:
+#          operation: 'status'
+#          classpath: '/'
+#          changeLogFile: 'changelog_master.json'
+#          username: postgres
+#          password: P@ssw0rd
           url: jdbc:postgresql:postgres
 
 
