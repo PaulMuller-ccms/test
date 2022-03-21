@@ -25,14 +25,16 @@ jobs:
           instance: clearchoice-main-nprod:us-west1:datawarehouse
 
       # Checks-out repository under $GITHUB_WORKSPACE, so job can access it
-      - uses: actions/checkout@v2
+      - name: check out repo
+        uses: actions/checkout@v2
       
       - name: debug
         run: | 
           ls -l
+          telnet 127.0.0.1:5432
 
-
-#      - uses: liquibase/liquibase-github-action@v2
+#      - name: run liquibase
+#        uses: liquibase/liquibase-github-action@v2
 #        with:
 #          operation: 'status'
 #          classpath: '/'
@@ -40,5 +42,3 @@ jobs:
 #          username: postgres
 #          password: P@ssw0rd
 #          url: jdbc:postgresql:postgres
-
-
