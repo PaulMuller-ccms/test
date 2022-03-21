@@ -31,6 +31,7 @@ jobs:
       - name: debug
         run: | 
           psql -V
+          psql -d postgres -h locahost -p 5432 -l
 
 #      - name: run liquibase
 #        uses: liquibase/liquibase-github-action@v2
