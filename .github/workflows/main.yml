@@ -31,7 +31,7 @@ jobs:
       - name: debug
         run: | 
           ls -l
-          telnet 127.0.0.1:5432
+          telnet 127.0.0.1 5432
 
 #      - name: run liquibase
 #        uses: liquibase/liquibase-github-action@v2
