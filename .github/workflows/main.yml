@@ -28,6 +28,10 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
       
+      - name: install liquibase
+        run : |
+          yum install liquibase
+          
       - name: debug
         run: | 
           ls -l
