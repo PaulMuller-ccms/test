@@ -14,9 +14,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  test-liquibase-action:
+  deploy-database:
     runs-on: ubuntu-latest
-    name: Test Liquibase Action
+    name: Deploy database
     steps:
       - name: Google Cloud SQL Proxy
         uses: mattes/gce-cloudsql-proxy-action@v1.0.1
@@ -25,7 +25,7 @@ jobs:
           instance: clearchoice-main-nprod:us-west1:datawarehouse
 
       # Checks-out repository under $GITHUB_WORKSPACE, so job can access it
-      - name: check out repo
+      - name: Check out repository
         uses: actions/checkout@v2
       
 #      - name: debug
@@ -33,7 +33,7 @@ jobs:
 #          export PGPASSWORD="P@ssw0rd"
 #          psql -d postgres -h 127.0.0.1 -p 5432 -U postgres -l
 
-      - name: run liquibase
+      - name: Run liquibase
         uses: liquibase/liquibase-github-action@v2
         with:
           operation: 'status'
@@ -41,4 +41,4 @@ jobs:
           changeLogFile: 'changelog_master.json'
           username: postgres
           password: P@ssw0rd
-          url: jdbc:postgresql://127.0.0.1:5432/datawarehouse
+          url: jdbc:postgresql://127.0.0.1:5432/postgres
