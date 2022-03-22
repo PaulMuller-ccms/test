@@ -32,7 +32,7 @@ jobs:
         run : |
           wget https://github.com/liquibase/liquibase/releases/download/v4.9.0/liquibase-4.9.0.tar.gz
           tar -xf liquibase-4.9.0.tar.gz
-          liquibase --help
+          ./liquibase --help
           
       - name: debug
         run: | 
