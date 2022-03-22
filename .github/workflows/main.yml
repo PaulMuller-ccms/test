@@ -30,16 +30,19 @@ jobs:
       
       - name: install liquibase
         run : |
-          wget https://github.com/liquibase/liquibase/releases/download/v4.9.0/liquibase-4.9.0.tar.gz
+          wget --non-verbose https://github.com/liquibase/liquibase/releases/download/v4.9.0/liquibase-4.9.0.tar.gz
           tar -xf liquibase-4.9.0.tar.gz
-          ./liquibase --help
+#          ./liquibase --help
           
       - name: debug
         run: | 
           export PGPASSWORD="P@ssw0rd"
           psql -d postgres -h 127.0.0.1 -p 5432 -U postgres -d datawarehouse -c '\dt'
 
-#      - name: Run liquibase
+      - name: Run liquibase
+        run: |
+          ./liquibase update
+
 #        uses: liquibase/liquibase-github-action@v2
 #        with:
 #          operation: 'status'
