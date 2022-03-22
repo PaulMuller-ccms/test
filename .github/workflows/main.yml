@@ -30,7 +30,10 @@ jobs:
       
       - name: install liquibase
         run : |
-          yum install liquibase
+          wget https://github.com/liquibase/liquibase/releases/download/v4.9.0/liquibase-4.9.0.tar.gz
+          tar -xf liquibase-4.9.0.tar.gz
+          ls -l
+          find .
           
       - name: debug
         run: | 
