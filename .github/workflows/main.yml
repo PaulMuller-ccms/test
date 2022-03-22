@@ -30,6 +30,7 @@ jobs:
       
       - name: debug
         run: | 
+          ls -l
           export PGPASSWORD="P@ssw0rd"
           psql -d postgres -h 127.0.0.1 -p 5432 -U postgres -d datawarehouse -c '\dt'
 
