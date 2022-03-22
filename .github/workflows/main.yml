@@ -32,12 +32,10 @@ jobs:
         run : |
           wget https://github.com/liquibase/liquibase/releases/download/v4.9.0/liquibase-4.9.0.tar.gz
           tar -xf liquibase-4.9.0.tar.gz
-          ls -l
-          find .
+          liquibase --help
           
       - name: debug
         run: | 
-          ls -l
           export PGPASSWORD="P@ssw0rd"
           psql -d postgres -h 127.0.0.1 -p 5432 -U postgres -d datawarehouse -c '\dt'
 
