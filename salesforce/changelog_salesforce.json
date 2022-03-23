@@ -1,0 +1,11 @@
+{"databaseChangeLog": [
+    {"changeSet": {"id": "1", "author": "pmuller", "runOnChange": true, "changes": [
+        {"sqlFile": {"dbms": "postgresql", "path": "account_v.sql"}}]}},
+    {"changeSet": {"id": "58", "author": "pmuller", "runOnChange": true, "changes": [
+        {"sqlFile": {"dbms": "postgresql", "path": "lead_v.sql"}}]}},
+    {"changeSet": {"id": "58", "author": "pmuller", "runOnChange": true, "changes": [
+        {"sqlFile": {"dbms": "postgresql", "path": "lead_v.sql"}}]}},
+    {"changeSet": {"id": "3", "author": "pmuller", "runOnChange": false, "changes": [
+        {"sqlFile": {"dbms": "postgresql", "path": "create_table.sql"}}]}}
+    ]
+}
