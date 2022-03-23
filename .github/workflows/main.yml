@@ -35,6 +35,7 @@ jobs:
           
       - name: debug
         run: | 
+          pwd
           ls -l
           find salesforce
 #          export PGPASSWORD="P@ssw0rd"
