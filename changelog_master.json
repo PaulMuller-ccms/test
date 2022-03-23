@@ -1,9 +1,9 @@
 {"databaseChangeLog": [
-	{"changeSet": {"id": "1", "author": "pmuller", "changes": [
-                {"sqlFile": {"dbms": "postgresql", "path": "saleforce/account_v.sql"}}]}},
-	{"changeSet": {"id": "58", "author": "pmuller", "changes": [
-                {"sqlFile": {"dbms": "postgresql", "path": "salesforce/lead_v.sql"}}]}},
-	{"changeSet": {"id": "3", "author": "pmuller", "changes": [
-                {"sqlFile": {"dbms": "postgresql", "path": "salesforce/opportunity_v.sql"}}]}},
-	]
+    {"changeSet": {"id": "1", "author": "pmuller", "changes": [
+        {"sqlFile": {"dbms": "postgresql", "path": "saleforce/account_v.sql"}}]}},
+    {"changeSet": {"id": "58", "author": "pmuller", "changes": [
+        {"sqlFile": {"dbms": "postgresql", "path": "salesforce/lead_v.sql"}}]}},
+    {"changeSet": {"id": "3", "author": "pmuller", "changes": [
+        {"sqlFile": {"dbms": "postgresql", "path": "salesforce/opportunity_v.sql"}}]}},
+    ]
 }
