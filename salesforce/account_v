@@ -1,5 +1,0 @@
-CREATE VIEW account_v
-AS
-SELECT 1 as account_id,
-       cast('2022-03-01' as date) as create_date
-;
