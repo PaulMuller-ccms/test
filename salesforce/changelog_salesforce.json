@@ -1,18 +1,18 @@
 {"databaseChangeLog": [
 
-    {"changeSet": {"id": "DW-1001", "author": "pmuller", "runOnChange": false, "changes": 
+    {"changeSet": {"id": "create_table.sql", "author": "pmuller", "runOnChange": false, "changes": 
         {"sqlFile": {"dbms": "postgresql", "relativeToChangelogFile": true, "path": "create_table.sql"}}}
     },
-    {"changeSet": {"id": "DW-1001", "author": "pmuller", "runOnChange": false, "changes": 
+    {"changeSet": {"id": "load_table_dml.sql", "author": "pmuller", "runOnChange": false, "changes": 
         {"sqlFile": {"dbms": "postgresql", "relativeToChangelogFile": true, "path": "load_table_dml.sql"}}}
     },
-    {"changeSet": {"id": "DW-1002", "author": "bkobishop", "runOnChange": true, "changes": 
+    {"changeSet": {"id": "account_v.sql", "author": "bkobishop", "runOnChange": true, "changes": 
         {"sqlFile": {"dbms": "postgresql", "relativeToChangelogFile": true, "path": "account_v.sql"}}}
     },
-    {"changeSet": {"id": "DW-1002", "author": "bkobishop", "runOnChange": true, "changes": 
+    {"changeSet": {"id": "lead_v.sql", "author": "bkobishop", "runOnChange": true, "changes": 
         {"sqlFile": {"dbms": "postgresql", "relativeToChangelogFile": true, "path": "lead_v.sql"}}}
     },
-    {"changeSet": {"id": "DW-1003", "author": "mroundcount", "runOnChange": true, "changes": 
+    {"changeSet": {"id": "opportunity_v.sql", "author": "mroundcount", "runOnChange": true, "changes": 
         {"sqlFile": {"dbms": "postgresql", "relativeToChangelogFile": true, "path": "opportunity_v.sql"}}}
     }
     
