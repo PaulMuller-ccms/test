@@ -1,10 +1,70 @@
-databaseChangeLog {
-
-// migration scripts - run once
-  include (file: "changelog.json", relativeToChangelogFile: "true")
-
-// database objects - run on change
-  include (file: "changelog-procedures.json", relativeToChangelogFile: "true")
-  include (file: "changelog-views.json", relativeToChangelogFile: "true")
-
-}
+        {
+            "databaseChangeLog": [
+              {
+                "preConditions": [
+                  {
+                  }
+                ]
+              },
+              {
+                "changeSet": {
+                  "id": "1",
+                  "author": "pmuller",
+                  "changes": [
+                    {
+                      "createTable": {
+                        "tableName": "person",
+                        "columns": [
+                          {
+                            "column": {
+                              "name": "id",
+                              "type": "int"
+                            }
+                          },
+                          {
+                            "column": {
+                              "name": "firstname",
+                              "type": "varchar(50)"
+                            }
+                          },
+                          {
+                            "column": {
+                              "name": "lastname",
+                              "type": "varchar(50)"
+                            }
+                          },
+                          {
+                            "column": {
+                              "name": "state",
+                              "type": "char(2)"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "changeSet": {
+                  "id": "2",
+                  "author": "nvoxland",
+                  "changes": [
+                    {
+                      "addColumn": {
+                        "tableName": "person",
+                        "columns": [
+                          {
+                            "column": {
+                              "name": "username",
+                              "type": "varchar(8)"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
