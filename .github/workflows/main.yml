@@ -33,9 +33,9 @@ jobs:
           wget -nv https://github.com/liquibase/liquibase/releases/download/v4.9.0/liquibase-4.9.0.tar.gz
           tar -xf liquibase-4.9.0.tar.gz
           
-      - name: debug
-        run: | 
-           ls -l
+#      - name: debug
+#        run: | 
+#           ls -l
 #          find lib
 #          wget --help
 #          export PGPASSWORD="P@ssw0rd"
@@ -43,13 +43,4 @@ jobs:
 
       - name: Run liquibase
         run: |
-          ./liquibase updateSQL
-
-#        uses: liquibase/liquibase-github-action@v2
-#        with:
-#          operation: 'status'
-#          classpath: '/'
-#          changeLogFile: 'changelog_master.json'
-#          username: postgres
-#          password: P@ssw0rd
-#          url: jdbc:postgresql://127.0.0.1:5432/postgres
+          ./liquibase update
