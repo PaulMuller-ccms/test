@@ -1,70 +1,9 @@
-        {
-            "databaseChangeLog": [
-              {
-                "preConditions": [
-                  {
-                  }
-                ]
-              },
-              {
-                "changeSet": {
-                  "id": "1",
-                  "author": "pmuller",
-                  "changes": [
-                    {
-                      "createTable": {
-                        "tableName": "person",
-                        "columns": [
-                          {
-                            "column": {
-                              "name": "id",
-                              "type": "int"
-                            }
-                          },
-                          {
-                            "column": {
-                              "name": "firstname",
-                              "type": "varchar(50)"
-                            }
-                          },
-                          {
-                            "column": {
-                              "name": "lastname",
-                              "type": "varchar(50)"
-                            }
-                          },
-                          {
-                            "column": {
-                              "name": "state",
-                              "type": "char(2)"
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "changeSet": {
-                  "id": "2",
-                  "author": "nvoxland",
-                  "changes": [
-                    {
-                      "addColumn": {
-                        "tableName": "person",
-                        "columns": [
-                          {
-                            "column": {
-                              "name": "username",
-                              "type": "varchar(8)"
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+{"databaseChangeLog": [
+	{"changeSet": {"id": "1", "author": "pmuller", "changes": [
+                {"sqlFile": {"dbms": "postgresql", "path": "saleforce/account_v.sql"}}]}},
+	{"changeSet": {"id": "58", "author": "pmuller", "changes": [
+                {"sqlFile": {"dbms": "postgresql", "path": "salesforce/lead_v.sql"}}]}},
+	{"changeSet": {"id": "3", "author": "pmuller", "changes": [
+                {"sqlFile": {"dbms": "postgresql", "path": "salesforce/opportunity_v.sql"}}]}},
+	]
+}
