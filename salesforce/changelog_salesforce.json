@@ -14,6 +14,10 @@
     },
     {"changeSet": {"id": "opportunity_v.sql", "author": "mroundcount", "runOnChange": true, "changes": 
         {"sqlFile": {"dbms": "postgresql", "relativeToChangelogFile": true, "path": "opportunity_v.sql"}}}
+    },
+    {"changeSet": {"id": "paul_v.sql", "author": "pmuller", "runOnChange": true, "changes": 
+        {"sqlFile": {"dbms": "postgresql", "relativeToChangelogFile": true, "path": "paul_v.sql"}}}
     }
+
     
 ]}

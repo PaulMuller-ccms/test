@@ -11,4 +11,3 @@ You can look at .github\workflows\main.yml to see what exactly happens when the 
 5. After that, I have a debug step, which i've sometimes commented out and other times have uncommented.  Its been useful to run commands on the instance so I can see how its configured and whats on its filesystem.
 6. Finally, we run the liquibase command "update".  Thats that command which applies changes to the database.  There are plenty of other liquibase commandes; but update is the one we'll be using the most.
 
-bump
